@@ -51,7 +51,63 @@ Verification is documented in the included report and compared against analytica
 % inside src/
 mainCouplefem
 ```
-Note: Refer to [Report_NFEM.pdf](Report_NFEM.pdf) for test cases, configurations, and validation plots.
+## Configurations
+
+You can customize the analysis by modifying parameters inside `src/mainCouplefem.m`.
+
+### Load Case Selection
+```matlab
+LoadCase = 5; % Choose from 5, 6, or 7 for different thermal loads
+```
+### Temperature-Dependent Material Properties
+```matlab
+temperatureDependent = 'yes'; % Set 'yes' for temperature-dependent properties
+```
+### Steady-State vs Transient Analysis
+```matlab
+steadyState = 'yes'; % Set 'no' for transient analysis
+```
+### Mesh Selection
+```matlab
+readFile = fopen('square100Element.inp', 'r');
+```
+## Testing and Validation
+1. **Patch Test**
+```matlab
+testCase = 3;
+eigenValueTest = 'no';
+numericalTesting = 'no';
+temperatureDependent = 'no';
+steadyState = 'yes';
+```
+2. **Comparison with Analytical Solution**
+```matlab
+testCase = 1; % also supports 2 or 4 (see report)
+eigenValueTest = 'no';
+numericalTesting = 'no';
+temperatureDependent = 'no';
+steadyState = 'yes';
+```
+3. **Numerical Testing**
+```matlab
+testCase = 1;
+eigenValueTest = 'no';
+numericalTesting = 'yes';
+temperatureDependent = 'no';
+steadyState = 'yes';
+```
+4. **Eigenvalue Test**
+```matlab
+testCase = 1;
+eigenValueTest = 'yes';
+numericalTesting = 'no';
+temperatureDependent = 'no';
+steadyState = 'yes';
+```
+
+## Results
+ - Displacement magnitude (u)
+ - Temperature distribution (T)
 
 ## Documentation
  - Full explanation of the governing equations, implementation details, and verification:
