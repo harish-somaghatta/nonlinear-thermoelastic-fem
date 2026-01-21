@@ -1,9 +1,8 @@
 # Nonlinear Thermoelastic FEM (2D) — MATLAB Implementation
 
 This project implements a **fully coupled nonlinear thermoelastic finite element solver (2D)** using a **Newton–Raphson** iterative scheme.  
-It includes temperature-dependent material behavior and coupling between mechanical deformation and heat transfer.
-
-Verification is documented in the included report and compared against analytical checks and Abaqus simulations.
+ - It includes temperature-dependent material behavior and coupling between mechanical deformation and heat transfer.
+ - Verification is documented in the included report and compared against analytical checks and Abaqus simulations.
 
 ## Repository Structure
 
