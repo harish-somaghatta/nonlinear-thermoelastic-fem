@@ -32,7 +32,7 @@ Verification is documented in the included report and compared against analytica
 ## Features
  - Fully coupled thermomechanical formulation (2D)
  - Nonlinear Newton–Raphson solution procedure
- - Implicit time integration (steady-state / transient support)
+ - Implicit time integration (steady-state / transient)
  - Quadrilateral elements (shape functions + Jacobian mapping)
  - Gauss quadrature for numerical integration
  - Validation with analytical checks and Abaqus comparisons (see report)
