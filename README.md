@@ -9,9 +9,25 @@ Verification is documented in the included report and compared against analytica
 
 ```text
 .
-├── src/                 # MATLAB source code (.m files)
+├── src/                       # MATLAB solver + routines
+│   ├── mainCouplefem.m         # Main script
+│   ├── elementMechfem.m        # Mechanical element routine
+│   ├── elementThermalfem.m     # Thermal element routine
+│   ├── elementMechThermfem.m   # Coupled thermo-mechanical element routine
+│   ├── materialMechfem.m       # Mechanical material model
+│   ├── materialThermalfem.m    # Thermal material model
+│   ├── extractDataInpFile.m    # Reads Abaqus-style .inp mesh files
+│   ├── shapefunctions.m        # Shape functions for quad elements
+│   ├── gaussPointsWeights.m    # Gauss quadrature points/weights
+│   ├── Bmatrix.m               # Strain-displacement B-matrix
+│   ├── recoveryStressStrain.m  # Stress/strain recovery (postprocessing)
+│   ├── plotMesh.m              # Mesh visualization
+│   ├── numericalTesting.m      # Verification / debugging tests
+│   ├── temperatureVisualization.m # Temperature field plots
+│   ├── square100Element.inp    # Example mesh (100 elements)
+│   └── squareCenterHoleFineMesh.inp # Example mesh (center hole)
 ├── README.md
-└── Report_NFEM.pdf       # Full project report (theory + validation)
+└── Report_NFEM.pdf             # Full report (theory + validation)
 ```
 ## Features
  - Fully coupled thermomechanical formulation (2D)
